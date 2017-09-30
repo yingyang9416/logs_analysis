@@ -2,9 +2,8 @@
 
 ## What's this
 
-This project is a reporting tool that prints out reports(in plain text) based on the data in PostgreSQL database. The data came from a real-world web application, with fields representing information that a web server would record, such as HTTP status codes and URL paths. The web server and the reporting tool both connect to the same database, allowing information to flow from the web server into the report.
+This project is a web application that provides a list of libraries with a lot of books as well as provides a user registration and authentication system. Registered users will have the ability to post, edit and delete their own items.
 
-No user input is required in this tool. It answers the questions about the user activity on the news website.
 
 ## How to use
 
@@ -23,11 +22,12 @@ The PostgreSQL database server will automatically be started inside the VM. You 
 #### (6) Logging out and in
 If you type ```exit``` or ```Ctrl+D``` at the shell prompt inside the VM, you will be logged out, and put back into your host computer's shell. To log back in, make sure you're in the same directory and type ```vagrant ssh``` again. If you reboot your computer, you will need to run ```vagrant up``` to restart the VM.
 
-### 2. Download the data
-Download and unzip *newsdata.zip*. The file inside is called *newsdata.sql*. Put this file into the **vagrant** directory, which is shared with your virtual machine. To have the reporting tool correctly run, you have to load the site's data into your local database. To load the data, use the command ```psql -d news -f newsdata.sql```. Running this command will connect to your installed database server and execute the SQL commands in the downloaded file, creating tables and populating them with data.
 
-### 3. Run the python file
-Before you run **logs_analysis.py**, make sure it is in the same folder with your database. In your vagrant shell, use command ```pyhon logs_analysis.py``` to run this file, and you will see the results output on the terminal.
+
+### 2. Run the python files
+
+#### (1) Change vagrant shell path
+To run the files, make sure you are in the right path in the vagrant. 
 
 ## Notes
 The questions are:
